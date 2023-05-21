@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthenticationService } from '../shared/authentication-service';
 
 @Component({
   selector: 'app-registration',
@@ -9,11 +8,18 @@ import { AuthenticationService } from '../shared/authentication-service';
 })
 export class RegistrationPage implements OnInit {
   constructor(
-    public authService: AuthenticationService,
     public router: Router
   ) {}
 
-  ngOnInit() {}
-
+  ngOnInit() {
+    
+  }
+  togglePassword() {
+    const passwordInput = document.querySelector('ion-input[type="password"]');
+    if (passwordInput) {
+      const inputType = passwordInput.getAttribute('type');
+      passwordInput.setAttribute('type', inputType === 'password' ? 'text' : 'password');
+    }
+  }
   
 }
