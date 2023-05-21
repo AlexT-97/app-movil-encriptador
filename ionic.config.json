@@ -1,0 +1,7 @@
+{
+  "name": "app-movil-encriptador",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
